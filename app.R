@@ -15,7 +15,12 @@ secher <- read.csv("data/secher_words.csv")
 ui <- fluidPage(
     # Application title
     titlePanel("Secher Søgemaskinen"),
-    fluidRow(column(width = 7, p("Secher Søgemaskinen arbejder med lovteksterne fra Sechers Forordninger og er udtrukket fra pdf. Logikken er her at kommentarerne og fodnoter til lovteksterne står i kursiv, mens den faktisk lovtekst står med almindelige skrift og i størrelse 12.5. Det data som Secher Søgemaskinen arbejder på er altså ikke-kursiveret tekst i størrelse 12.5. Data er på et enkelt ords niveau. Derfor at det ikke muligt at lave frasesøgninger f.eks. 'frycht for gud'  ")), column(width = 4, offset = 1, img(src= "secher_page.png", alt = "Et eksempel på en side fra Sechers Forordninger", width = "100%"))
+    fluidRow(column(width = 7, 
+                    p("Secher Søgemaskinen arbejder med lovteksterne fra Sechers Forordninger og er udtrukket fra pdf. Logikken er her at kommentarerne og fodnoter til lovteksterne står i kursiv, mens den faktisk lovtekst står med almindelige skrift og i størrelse 12.5. Det data som Secher Søgemaskinen arbejder på er altså ikke-kursiveret tekst i størrelse 12.5. Data er på et enkelt ords niveau. Derfor at det ikke muligt at lave frasesøgninger f.eks. 'frycht for gud'  "),
+                    p("Want to examine the underlying dataprocessing steps of this app? See the source code on Github:"),
+                  a("https://github.com/maxodsbjerg/SecherSearcher", href="https://github.com/maxodsbjerg/SecherSearcher")
+                    ), 
+             column(width = 4, offset = 1, img(src= "secher_page.png", alt = "Et eksempel på en side fra Sechers Forordninger", width = "100%"))
 ),
 
 hr(),
